@@ -60,6 +60,7 @@
   </dependencies>
 
   <build>
+    <finalName>MealBuddy</finalName>
     <plugins>
       <!-- Maven War Plugin (Handles webapp packaging) -->
       <plugin>
@@ -67,8 +68,33 @@
         <artifactId>maven-war-plugin</artifactId>
         <version>3.4.0</version>
         <configuration>
-          <failOnMissingWebXml>false</failOnMissingWebXml> <!-- Since web.xml is optional in Servlet 3.0+ -->
+          <failOnMissingWebXml>false</failOnMissingWebXml>
         </configuration>
+      </plugin>
+      
+      <!-- Dependency Plugin to download webapp-runner (Tomcat 10) -->
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-dependency-plugin</artifactId>
+        <version>3.6.0</version>
+        <executions>
+          <execution>
+            <phase>package</phase>
+            <goals>
+              <goal>copy</goal>
+            </goals>
+            <configuration>
+              <artifactItems>
+                <artifactItem>
+                  <groupId>com.heroku</groupId>
+                  <artifactId>webapp-runner</artifactId>
+                  <version>10.0.27.0</version> <!-- Uses Tomcat 10 for Jakarta namespace support -->
+                  <destFileName>webapp-runner.jar</destFileName>
+                </artifactItem>
+              </artifactItems>
+            </configuration>
+          </execution>
+        </executions>
       </plugin>
     </plugins>
   </build>
