@@ -6,10 +6,30 @@ import java.sql.SQLException;
 
 public class DBConnection {
 	
-	private static final String URL = "jdbc:mysql://localhost:3306/dao_project";
-	private static final String USERNAME = "root";
-	private static final String PASSWORD = "root";
+	private static String URL;
+	private static String USERNAME;
+	private static String PASSWORD;
 	private static Connection con;
+
+	static {
+		// Look for cloud environment variables (e.g. Railway MySQL)
+		String dbHost = System.getenv("MYSQLHOST");
+		String dbPort = System.getenv("MYSQLPORT");
+		String dbName = System.getenv("MYSQLDATABASE");
+		String dbUser = System.getenv("MYSQLUSER");
+		String dbPass = System.getenv("MYSQLPASSWORD");
+
+		if (dbHost != null && dbPort != null && dbName != null) {
+			URL = "jdbc:mysql://" + dbHost + ":" + dbPort + "/" + dbName;
+			USERNAME = dbUser != null ? dbUser : "root";
+			PASSWORD = dbPass != null ? dbPass : "";
+		} else {
+			// Local fallback
+			URL = "jdbc:mysql://localhost:3306/dao_project";
+			USERNAME = "root";
+			PASSWORD = "root";
+		}
+	}
 	
 	public static Connection getConnection(){
 		
