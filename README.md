@@ -3,7 +3,6 @@
 [![Java Version](https://img.shields.io/badge/Java-17-orange.svg)](https://www.oracle.com/java/technologies/downloads/)
 [![Tomcat Version](https://img.shields.io/badge/Tomcat-10-blue.svg)](https://tomcat.apache.org/)
 [![Database](https://img.shields.io/badge/MySQL-8.0-blue.svg)](https://www.mysql.com/)
-[![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 
 MealBuddy is a premium, full-stack Java Web Application built using JSP, Servlets, and Maven. It provides an end-to-end marketplace for gourmet food ordering and delivery, featuring separate dedicated portals for **Customers**, **Restaurant Merchants**, and **Delivery Riders**.
 
