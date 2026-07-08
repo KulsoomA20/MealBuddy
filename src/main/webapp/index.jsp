@@ -143,7 +143,7 @@
         }
     </style>
 </head>
-<body>
+<body class="transparent-nav-page">
 
     <!-- Dynamic Header -->
     <%@ include file="includes/navbar.jsp" %>
