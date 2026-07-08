@@ -159,12 +159,11 @@
         </div>
 
         <div class="hero-content centered-content">
-            <div class="hero-brand" style="font-family: 'Plus Jakarta Sans', sans-serif; font-size: 2.8rem; font-weight: 500; color: #fcf9f0; margin-bottom: 1rem; letter-spacing: 1.84px; text-transform: uppercase;">
+            <div class="hero-brand" style="font-family: 'Plus Jakarta Sans', sans-serif; font-size: 3.4rem; font-weight: 500; color: #fcf9f0; margin-bottom: 1rem; letter-spacing: 1.84px; text-transform: uppercase;">
                 MealBuddy
             </div>
-            <h1 class="hero-title" style="font-family: 'Plus Jakarta Sans', sans-serif; font-size: 4.6rem; font-weight: 400; color: #ffffff; margin-bottom: 1.5rem; line-height: 1.0; letter-spacing: 4.5px; text-transform: uppercase;">
-                Gourmet Food,<br>
-                <span style="color: #f7ea48;">Delivered Instantly</span>
+            <h1 class="hero-title" style="font-family: 'Plus Jakarta Sans', sans-serif; font-size: 2.8rem; font-weight: 400; color: #ffffff; margin-bottom: 1.5rem; line-height: 1.0; letter-spacing: 4.5px;">
+                Gourmet Food,<br> Delivered Instantly
             </h1>
             <p class="hero-subtitle" style="margin: 1.5rem auto 3rem auto; color: #fcf9f0; max-width: 650px; font-size: 1.25rem; line-height: 1.25; letter-spacing: 0.4px;">
                 Satisfy your cravings with the finest cuisines from top-rated local restaurants. Fast delivery, persistent cart, and real-time tracking.
