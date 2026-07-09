@@ -5,22 +5,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Payment Successful - MealBuddy</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap">
     <style>
         :root {
-            --bg-dark: #090d16;
-            --card-dark: #121824;
-            --primary: #ff5f2e;
-            --accent: #10b981;
-            --text-main: #f8fafc;
-            --text-muted: #94a3b8;
-            --border-color: rgba(255,255,255,0.08);
+            --bg-dark: #1d0b0d; /* Black Olive */
+            --card-dark: #1d0b0d; /* Black Olive */
+            --primary: #f7ea48; /* Lemon Zest */
+            --accent: #fcf9f0; /* Warm Cream */
+            --text-main: #fcf9f0; /* Warm Cream */
+            --text-muted: #dbe2dc; /* Sage Mist */
+            --border-color: rgba(219, 226, 220, 0.15);
+            --success-color: #34d399; /* Green checkmark for payment success */
         }
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
         }
         body {
             background-color: var(--bg-dark);
@@ -35,10 +36,9 @@
             width: 100%;
             max-width: 400px;
             background: var(--card-dark);
-            border-radius: 20px;
+            border-radius: 0px; /* Limón unsoftened 0px */
             padding: 2.5rem;
             border: 1px solid var(--border-color);
-            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
             text-align: center;
             display: flex;
             flex-direction: column;
@@ -48,8 +48,8 @@
         .success-icon {
             width: 80px;
             height: 80px;
-            background: rgba(16, 185, 129, 0.1);
-            color: var(--accent);
+            background: rgba(52, 211, 153, 0.1);
+            color: var(--success-color);
             border-radius: 50%;
             display: flex;
             align-items: center;
@@ -67,6 +67,8 @@
             font-size: 1.5rem;
             font-weight: 800;
             color: var(--text-main);
+            text-transform: uppercase;
+            letter-spacing: 0.9px;
         }
         .message {
             font-size: 0.95rem;
@@ -78,7 +80,7 @@
             background: rgba(255,255,255,0.01);
             border: 1px solid var(--border-color);
             padding: 1rem;
-            border-radius: 12px;
+            border-radius: 1px;
             font-size: 0.85rem;
             text-align: left;
             display: flex;

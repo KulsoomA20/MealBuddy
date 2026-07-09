@@ -5,22 +5,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MealBuddy Secure UPI - Mobile Pay</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap">
     <style>
         :root {
-            --bg-dark: #090d16;
-            --card-dark: #121824;
-            --primary: #ff5f2e;
-            --accent: #10b981;
-            --text-main: #f8fafc;
-            --text-muted: #94a3b8;
-            --border-color: rgba(255,255,255,0.08);
+            --bg-dark: #1d0b0d; /* Black Olive */
+            --card-dark: #1d0b0d; /* Black Olive */
+            --primary: #f7ea48; /* Lemon Zest */
+            --accent: #fcf9f0; /* Warm Cream */
+            --text-main: #fcf9f0; /* Warm Cream */
+            --text-muted: #dbe2dc; /* Sage Mist */
+            --border-color: rgba(219, 226, 220, 0.15);
         }
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
         }
         body {
             background-color: var(--bg-dark);
@@ -35,10 +35,9 @@
             width: 100%;
             max-width: 400px;
             background: var(--card-dark);
-            border-radius: 20px;
+            border-radius: 0px; /* Limón unsoftened 0px */
             padding: 2rem;
             border: 1px solid var(--border-color);
-            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
             display: flex;
             flex-direction: column;
             gap: 1.5rem;
@@ -52,18 +51,17 @@
             color: var(--text-main);
             margin-bottom: 0.5rem;
         }
-        .logo span {
-            color: var(--primary);
-        }
         .subtitle {
             font-size: 0.85rem;
             color: var(--text-muted);
+            letter-spacing: 0.52px;
+            text-transform: uppercase;
         }
         .payment-summary {
             background: rgba(255,255,255,0.02);
             border: 1px solid var(--border-color);
             padding: 1.25rem;
-            border-radius: 12px;
+            border-radius: 1px;
             text-align: center;
         }
         .amount-label {
@@ -76,7 +74,7 @@
         .amount {
             font-size: 2.2rem;
             font-weight: 800;
-            color: var(--accent);
+            color: var(--primary); /* Saturated yellow */
         }
         .order-ids {
             font-size: 0.8rem;
@@ -94,6 +92,8 @@
             font-size: 0.85rem;
             font-weight: 600;
             color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 0.64px;
         }
         .pin-input {
             width: 100%;
@@ -101,31 +101,32 @@
             font-size: 1.5rem;
             letter-spacing: 0.5rem;
             text-align: center;
-            border-radius: 12px;
+            border-radius: 1px;
             border: 1px solid var(--border-color);
-            background: rgba(0,0,0,0.2);
+            background: rgba(255,255,255,0.03);
             color: #fff;
             outline: none;
             transition: 0.2s;
         }
         .pin-input:focus {
             border-color: var(--primary);
-            box-shadow: 0 0 10px rgba(255, 95, 46, 0.2);
         }
         .btn-pay {
             background: var(--primary);
-            color: #fff;
+            color: var(--bg-dark);
             border: none;
             padding: 1.1rem;
             font-size: 1.05rem;
             font-weight: 700;
-            border-radius: 12px;
+            border-radius: 1px;
             cursor: pointer;
             transition: 0.2s;
             display: flex;
             align-items: center;
             justify-content: center;
             gap: 0.5rem;
+            text-transform: uppercase;
+            letter-spacing: 0.64px;
         }
         .btn-pay:active {
             transform: scale(0.98);
@@ -146,7 +147,7 @@
     <div class="mobile-card">
         <div class="header">
             <div class="logo" style="display: flex; align-items: center; justify-content: center; gap: 0.5rem; margin-bottom: 0.25rem;">
-                <img src="${pageContext.request.contextPath}/images/logo.png" alt="MealBuddy Logo" style="height: 35px; width: auto; object-fit: contain;">
+                <img src="${pageContext.request.contextPath}/images/logo1.png" alt="MealBuddy Logo" style="height: 35px; width: auto; object-fit: contain;">
             </div>
             <div class="subtitle">Secure UPI Checkout Portal</div>
         </div>
